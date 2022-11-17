@@ -79,28 +79,26 @@ function Home() {
     setFiltered(filteredData);
   }
 
-  // function handleDisplayClick(displayType: string) {
-  //     setDisplay(displayType);
-  // }
-
   return (
     <>
       <Title content="Order Delivery Or Takeaway" />
 
-      <div>
-        <button
-          onClick={() => setDisplay("grid")}
-          className="btn btn-light mx-1"
-        >
-          <i className="bi-grid-3x3-gap-fill"></i>
-        </button>
-
-        <button onClick={() => setDisplay("list")} className="btn btn-light">
-          <i className="bi-list-ul"></i>
-        </button>
-
+      <div className="d-flex px-5">
         <div>
-          <label>Category:</label>
+          <button
+            onClick={() => setDisplay("grid")}
+            className="btn btn-light mx-1"
+          >
+            <i className="bi-grid-3x3-gap-fill"></i>
+          </button>
+
+          <button onClick={() => setDisplay("list")} className="btn btn-light">
+            <i className="bi-list-ul"></i>
+          </button>
+        </div>
+
+        <div className="d-flex align-items-center">
+          <label className="mx-3">Category:</label>
           <select
             value={selectdCategory}
             onChange={handleCategoryChange}
